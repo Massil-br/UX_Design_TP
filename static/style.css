@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.headerTitle {
+    background-color: #005903;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+}
+
+#posts-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+.post {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+}
+
+.post img {
+    display: block;
+    margin: 10px 0;
+}
+
