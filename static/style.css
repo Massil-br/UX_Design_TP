@@ -1,33 +1,96 @@
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    background-color: #1d1919;
+    color: #333;
 }
+
 
 .headerTitle {
     background-color: #005903;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 20px;
+    font-size: 2rem;
+    font-weight: bold;
     margin: 0;
 }
 
+
 #posts-container {
-    max-width: 800px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
     margin: 20px auto;
-    padding: 10px;
+    padding: 20px;
+    box-sizing: border-box;
 }
+
 
 .post {
     border: 1px solid #ddd;
-    padding: 10px;
-    margin-bottom: 10px;
-    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .post img {
-    display: block;
+    max-width: 100%;
+    height: auto;
     margin: 10px 0;
+    border-radius: 4px;
 }
 
+.post h2 {
+    font-size: 1.4rem;
+    margin: 0 0 10px;
+    color: #005903;
+}
+
+.post p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 5px 0;
+    color: #555;
+}
+
+.post p:nth-of-type(2) {
+    font-weight: bold;
+    color: #333;
+}
+
+
+@media (max-width: 600px) {
+    .headerTitle {
+        font-size: 1.5rem;
+        padding: 15px;
+    }
+
+    .post {
+        padding: 10px;
+    }
+
+    .post h2 {
+        font-size: 1.2rem;
+    }
+
+    .post p {
+        font-size: 0.9rem;
+    }
+}

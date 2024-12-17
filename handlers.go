@@ -41,7 +41,7 @@ func GetPostsHandler(w http.ResponseWriter, r *http.Request) {
 	limit , err := strconv.Atoi(limitStr)
 
 	if err != nil || limit <1 {
-		limit = 10
+		limit = 12
 	}
 
 	posts, err := src.GetPosts(page, limit)

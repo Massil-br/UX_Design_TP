@@ -30,7 +30,7 @@ func(post *Post) GetImageUrl() string {
     return post.ImageURL
 }
 
-// Getter methods for field addresses (pointers)
+
 
 func(post *Post) GetIDAdress() *int {
     return &post.ID

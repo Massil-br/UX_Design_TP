@@ -1,11 +1,11 @@
 let page = 1;
-const limit = 10;
+const limit = 14;
 const container = document.getElementById('posts-container');
 
 async function loadPosts(){
     const response = await fetch(`/api/posts?page=${page}&limit=${limit}`);
     const posts = await response.json();
-    console.log(posts); // Check the structure of the posts
+    console.log(posts); 
 
     posts.forEach(post => {
         const postDiv = document.createElement('div');
@@ -19,16 +19,15 @@ async function loadPosts(){
         container.appendChild(postDiv);
     });
 
-    page++;  // Increment page after loading the posts
+    page++;  
 }
 
-// Event listener for infinite scrolling
 window.addEventListener('scroll', () => {
-    // If the user scrolls to the bottom of the page, load more posts
+    
     if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
         loadPosts();
     }
 });
 
-// Load the first set of posts when the page loads
+
 loadPosts();
